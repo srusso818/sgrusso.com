@@ -287,6 +287,8 @@ select {
 }
 
 .hero-editorial {
+  position: relative;
+  overflow: hidden;
   padding: var(--space-8) var(--space-7);
   display: flex;
   flex-direction: column;
@@ -295,6 +297,21 @@ select {
   border-right: 1px solid var(--border-subtle);
   background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+.hero-signal-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+.hero-content-layer {
+  position: relative;
+  z-index: 1;
 }
 
 .telemetry-line {
@@ -315,6 +332,7 @@ select {
   background-color: var(--status-ok);
   box-shadow: 0 0 0 3px var(--status-ok-subtle);
   flex-shrink: 0;
+  animation: statusPulse 2.8s ease-in-out infinite;
 }
 
 .hero-headline {
@@ -949,15 +967,33 @@ select {
   color: var(--accent-primary);
 }
 
-.case-detail {
-  display: none;
-  padding: 0 var(--space-7) var(--space-6) calc(var(--space-7) + 56px + var(--space-5));
+.case-detail-shell {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 360ms var(--ease-out);
   background-color: var(--bg-surface);
+}
+
+.case-item.is-open .case-detail-shell {
+  grid-template-rows: 1fr;
+}
+
+.case-detail-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.case-detail {
+  padding: 0 var(--space-7) var(--space-6) calc(var(--space-7) + 56px + var(--space-5));
   border-top: 1px dashed var(--border-subtle);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 260ms ease, transform 320ms var(--ease-out);
 }
 
 .case-item.is-open .case-detail {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .case-detail-grid {
@@ -1709,5 +1745,339 @@ select {
 
   .node-indicator {
     display: none;
+  }
+}
+
+
+/* ==========================================================================
+   Kinetic Engineering Layer — Telemetry Pulses, Blueprint Choreography,
+   Fluid View Transitions & Tactile Cursor Illumination
+   ========================================================================== */
+
+/* 1. Sticky Header Read-Progress Telemetry Line */
+.scroll-progress-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: transparent;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.scroll-progress-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-hover));
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+/* 2. Status Heartbeat & Button Micro-Physics */
+@keyframes statusPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 3px var(--status-ok-subtle);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 7px transparent;
+    opacity: 0.78;
+  }
+}
+
+.btn {
+  position: relative;
+  transition: transform 180ms var(--ease-out),
+              background-color var(--duration-fast) ease,
+              border-color var(--duration-fast) ease,
+              color var(--duration-fast) ease,
+              box-shadow 180ms var(--ease-out);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* 3. Hero Entrance Stagger */
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-stagger {
+  animation: heroRise 680ms var(--ease-out) both;
+}
+
+.hero-stagger-1 { animation-delay: 40ms; }
+.hero-stagger-2 { animation-delay: 120ms; }
+.hero-stagger-3 { animation-delay: 210ms; }
+.hero-stagger-4 { animation-delay: 300ms; }
+
+/* 4. GEORGE AI Data-Packet Signal Conduits, Tour Progress & Inspector Crossfade */
+.tour-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-surface);
+  transition: border-color var(--duration-fast) ease, color var(--duration-fast) ease;
+}
+
+.tour-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+.tour-badge.is-paused .tour-dot {
+  background-color: var(--ink-muted);
+  animation: none;
+}
+
+.topology-node {
+  overflow: hidden;
+}
+
+.topology-node:hover {
+  transform: translateX(3px);
+}
+
+.topology-node.is-selected {
+  transform: translateX(4px);
+}
+
+/* Auto-tour timer sweep along bottom of active GEORGE layer */
+@keyframes tourSweep {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.topology-node.is-selected.is-touring::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--accent-primary);
+  opacity: 0.65;
+  transform-origin: 0 50%;
+  animation: tourSweep 5200ms linear forwards;
+}
+
+.connector-line {
+  position: relative;
+  width: 2px;
+  height: 20px;
+  background-color: var(--border-subtle);
+  overflow: hidden;
+}
+
+@keyframes packetDrop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(220%);
+    opacity: 0;
+  }
+}
+
+.connector-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 9px;
+  background: linear-gradient(180deg, transparent, var(--accent-primary), var(--accent-hover));
+  animation: packetDrop 2.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.topology-connector:nth-of-type(2) .connector-line::after {
+  animation-delay: 0.55s;
+}
+
+.topology-connector:nth-of-type(3) .connector-line::after {
+  animation-delay: 1.1s;
+}
+
+@keyframes inspectorFadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inspector-content-anim {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  height: 100%;
+  animation: inspectorFadeSlide 320ms var(--ease-out) both;
+}
+
+/* 5. Blueprint Scroll-Reveal & Hairline Plotting Choreography */
+.section-rail {
+  position: relative;
+}
+
+.section-rail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-primary), transparent 65%);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition: transform 900ms var(--ease-out);
+  pointer-events: none;
+}
+
+.section-rail.is-revealed::after {
+  transform: scaleX(1);
+}
+
+.reveal-block {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 560ms var(--ease-out),
+              transform 560ms var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-block.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Case Study Filter Re-entry Animation */
+@keyframes caseFilterIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.case-item.is-filtering-in {
+  animation: caseFilterIn 280ms var(--ease-out) both;
+}
+
+.case-trigger {
+  transition: background-color var(--duration-fast) ease,
+              padding-left 200ms var(--ease-out);
+}
+
+.case-trigger:hover .case-title {
+  color: var(--accent-primary);
+  transition: color var(--duration-fast) ease;
+}
+
+/* 6. Tactile Cursor-Tracked Surface Illumination (Linear-Style Subtle Sheen) */
+.spotlight-surface {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 260ms ease;
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, 50%),
+    color-mix(in oklch, var(--accent-primary) 11%, transparent),
+    transparent 65%
+  );
+}
+
+.spotlight-surface:hover::before {
+  opacity: 1;
+}
+
+.cap-items li,
+.spec-tag {
+  transition: border-color var(--duration-fast) ease,
+              color var(--duration-fast) ease,
+              transform 160ms var(--ease-out);
+}
+
+.cap-items li:hover,
+.spec-tag:hover {
+  border-color: var(--accent-border);
+  color: var(--ink-primary);
+  transform: translateY(-1px);
+}
+
+/* Command Palette Entrance */
+@keyframes cmdModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cmd-backdrop:not([hidden]) .cmd-dialog {
+  animation: cmdModalIn 200ms var(--ease-out) both;
+}
+
+/* Native View Transition Polish for Slate <-> Paper Switch */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 280ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-stagger,
+  .reveal-block {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .connector-line::after,
+  .topology-node.is-selected.is-touring::after,
+  .status-dot,
+  .tour-dot {
+    animation: none !important;
   }
 }

@@ -135,6 +135,9 @@
         </button>
       </div>
     </div>
+    <div class="scroll-progress-track" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
   </header>
 
   <div class="dossier-shell" id="top">
@@ -142,49 +145,50 @@
       <!-- 00 // Asymmetric Blueprint Hero -->
       <section class="hero-section" aria-labelledby="hero-heading">
         <div class="hero-editorial">
-          <div>
-            <div class="telemetry-line">
+          <canvas id="hero-signal-canvas" class="hero-signal-canvas" aria-hidden="true"></canvas>
+          <div class="hero-content-layer">
+            <div class="telemetry-line hero-stagger hero-stagger-1">
               <span class="status-dot" aria-hidden="true"></span>
               <span>Northwest Arkansas &amp; Hybrid · Senior Systems &amp; Infrastructure Leadership</span>
             </div>
 
-            <h1 class="hero-headline" id="hero-heading">
+            <h1 class="hero-headline hero-stagger hero-stagger-2" id="hero-heading">
               Architecting resilient core infrastructure—from <em>sovereign H100 AI</em> to zero-downtime datacenters.
             </h1>
 
-            <p class="hero-lead">
+            <p class="hero-lead hero-stagger hero-stagger-3">
               <strong>Stephen G. Russo</strong> is a Senior Systems Engineer and Infrastructure Leader with over twenty years of operational command across <strong>$1T+ institutional finance</strong> and <strong>public-sector government environments</strong>—modernizing VMware vSphere clusters, Dell PowerStore SANs, zero-trust PKI, cyber-resilient backups, and on-premises enterprise AI.
             </p>
           </div>
 
-          <div class="hero-actions">
+          <div class="hero-actions hero-content-layer hero-stagger hero-stagger-4">
             <a href="#case-studies" class="btn btn-primary">Inspect Case Studies ↓</a>
             <a href="resume.html" class="btn btn-secondary">Executive Résumé (Print / PDF)</a>
             <a href="#contact" class="btn btn-ghost">Direct Dispatch →</a>
           </div>
         </div>
 
-        <aside class="hero-ledger" aria-label="Executive Specification Summary">
+        <aside class="hero-ledger hero-stagger hero-stagger-3" aria-label="Executive Specification Summary">
           <div class="ledger-header">
             <span>Dossier Spec // SGR-2026</span>
-            <span>REV 04.26</span>
+            <span id="live-clock">REV 04.26</span>
           </div>
 
           <div class="ledger-metrics">
-            <div class="metric-cell">
-              <span class="metric-value">20+ Yrs</span>
+            <div class="metric-cell spotlight-surface">
+              <span class="metric-value" data-metric-target="20" data-metric-suffix="+ Yrs">20+ Yrs</span>
               <span class="metric-label">Enterprise Systems &amp; Datacenter Engineering</span>
             </div>
-            <div class="metric-cell">
-              <span class="metric-value">H100</span>
+            <div class="metric-cell spotlight-surface">
+              <span class="metric-value" data-metric-decode="H100">H100</span>
               <span class="metric-label">On-Premises Sovereign LLM &amp; Multimodal AI</span>
             </div>
-            <div class="metric-cell">
-              <span class="metric-value">$1T+</span>
+            <div class="metric-cell spotlight-surface">
+              <span class="metric-value" data-metric-prefix="$" data-metric-target="1" data-metric-suffix="T+">$1T+</span>
               <span class="metric-label">Institutional Finance Client AUM Supported</span>
             </div>
-            <div class="metric-cell">
-              <span class="metric-value">99%+</span>
+            <div class="metric-cell spotlight-surface">
+              <span class="metric-value" data-metric-target="99" data-metric-suffix="%+">99%+</span>
               <span class="metric-label">Multi-Site Cluster, SAN &amp; Network Availability</span>
             </div>
           </div>
@@ -239,11 +243,14 @@
           </div>
         </div>
 
-        <div class="george-layout">
+        <div class="george-layout" id="george-layout">
           <div class="george-diagram-pane">
             <div class="diagram-toolbar">
               <span class="diagram-caption">Interactive System Topology — Select a layer to inspect</span>
-              <span class="diagram-caption">ENV: ON-PREM COUNTY DATACENTER</span>
+              <span class="diagram-caption tour-badge" id="george-tour-status">
+                <span class="tour-dot" aria-hidden="true"></span>
+                <span>AUTO-TELEMETRY · HOVER TO HOLD</span>
+              </span>
             </div>
 
             <div
