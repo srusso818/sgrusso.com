@@ -1,0 +1,10 @@
+# Keep raw reference PDFs (which contain home street address) out of public GitHub repo
+ref assets/
+
+# OS / Editor metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+

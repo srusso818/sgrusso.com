@@ -1,0 +1,170 @@
+/* ==========================================================================
+   SGRusso.com — Design Tokens (DESIGN.md Compliant)
+   Hallmark · macrostructure: asymmetric-technical-dossier
+   Impeccable · OKLCH tinted neutrals, 3-voice typography, 4/8px baseline
+   ========================================================================== */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Tinted Slate Dark — Zero pure #000000 */
+  --bg-canvas: #0f141c;
+  --bg-canvas: oklch(0.155 0.012 250);
+
+  --bg-surface: #151b26;
+  --bg-surface: oklch(0.188 0.014 250);
+
+  --bg-recessed: #0b0f16;
+  --bg-recessed: oklch(0.135 0.011 250);
+
+  --bg-hover: #1c2432;
+  --bg-hover: oklch(0.222 0.016 250);
+
+  --bg-elevated: #19212e;
+  --bg-elevated: oklch(0.205 0.015 250);
+
+  /* Architectural Hairline Rules */
+  --border-subtle: #242d3d;
+  --border-subtle: oklch(0.255 0.015 250);
+
+  --border-strong: #354256;
+  --border-strong: oklch(0.340 0.018 250);
+
+  /* Ink Hierarchy */
+  --ink-primary: #eef2f7;
+  --ink-primary: oklch(0.955 0.006 250);
+
+  --ink-secondary: #a8b3c4;
+  --ink-secondary: oklch(0.750 0.012 250);
+
+  --ink-muted: #768396;
+  --ink-muted: oklch(0.585 0.014 250);
+
+  /* Single Intentional Brand Accent — Burnished Signal Copper/Amber */
+  --accent-primary: #e09f50;
+  --accent-primary: oklch(0.760 0.135 65);
+
+  --accent-hover: #ebb169;
+  --accent-hover: oklch(0.805 0.135 68);
+
+  --accent-ink: #12161f;
+  --accent-ink: oklch(0.160 0.015 250);
+
+  --accent-subtle: rgba(224, 159, 80, 0.11);
+  --accent-subtle: oklch(0.760 0.135 65 / 0.12);
+
+  --accent-border: rgba(224, 159, 80, 0.38);
+  --accent-border: oklch(0.760 0.135 65 / 0.40);
+
+  /* Operational Telemetry Accent (strictly for live status / health dots) */
+  --status-ok: #38c172;
+  --status-ok: oklch(0.730 0.145 155);
+
+  --status-ok-subtle: rgba(56, 193, 114, 0.12);
+  --status-ok-subtle: oklch(0.730 0.145 155 / 0.12);
+
+  /* Subtle Structural Blueprint Grid Pattern */
+  --grid-dot: rgba(168, 179, 196, 0.06);
+  --shadow-modal: 0 24px 64px rgba(3, 6, 12, 0.72);
+  --backdrop-scrim: rgba(7, 10, 15, 0.76);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Warm Archival Vellum — Zero harsh #ffffff glare */
+  --bg-canvas: #f7f5f0;
+  --bg-canvas: oklch(0.972 0.007 85);
+
+  --bg-surface: #fcfbf8;
+  --bg-surface: oklch(0.990 0.004 85);
+
+  --bg-recessed: #efece4;
+  --bg-recessed: oklch(0.945 0.009 85);
+
+  --bg-hover: #ebe7dd;
+  --bg-hover: oklch(0.932 0.011 85);
+
+  --bg-elevated: #ffffff;
+  --bg-elevated: oklch(0.996 0.002 85);
+
+  /* Architectural Hairline Rules */
+  --border-subtle: #dcd6ca;
+  --border-subtle: oklch(0.865 0.010 85);
+
+  --border-strong: #b6afa0;
+  --border-strong: oklch(0.740 0.014 85);
+
+  /* Ink Hierarchy */
+  --ink-primary: #141b24;
+  --ink-primary: oklch(0.185 0.015 250);
+
+  --ink-secondary: #3c4654;
+  --ink-secondary: oklch(0.375 0.015 250);
+
+  --ink-muted: #646f7d;
+  --ink-muted: oklch(0.515 0.014 250);
+
+  /* Architectural Copper Accent (WCAG AA compliant on warm paper) */
+  --accent-primary: #9c4a1a;
+  --accent-primary: oklch(0.500 0.140 52);
+
+  --accent-hover: #7f3a11;
+  --accent-hover: oklch(0.435 0.135 50);
+
+  --accent-ink: #fcfbf8;
+  --accent-ink: oklch(0.990 0.004 85);
+
+  --accent-subtle: rgba(156, 74, 26, 0.08);
+  --accent-subtle: oklch(0.500 0.140 52 / 0.09);
+
+  --accent-border: rgba(156, 74, 26, 0.34);
+  --accent-border: oklch(0.500 0.140 52 / 0.35);
+
+  /* Forest Telemetry */
+  --status-ok: #1d7a46;
+  --status-ok: oklch(0.490 0.125 155);
+
+  --status-ok-subtle: rgba(29, 122, 70, 0.10);
+  --status-ok-subtle: oklch(0.490 0.125 155 / 0.10);
+
+  --grid-dot: rgba(20, 27, 36, 0.055);
+  --shadow-modal: 0 24px 60px rgba(20, 27, 36, 0.18);
+  --backdrop-scrim: rgba(20, 27, 36, 0.48);
+}
+
+/* Typography & Spatial Scale */
+:root {
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem;      /* 12px */
+  --text-sm: 0.875rem;     /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg: 1.1875rem;    /* 19px */
+  --text-xl: 1.4375rem;    /* 23px */
+  --text-2xl: 2.0625rem;   /* 33px */
+  --text-display: clamp(2.35rem, 4.2vw, 3.75rem);
+
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+  --space-9: 6rem;      /* 96px */
+
+  --container-max: 1240px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+}
+

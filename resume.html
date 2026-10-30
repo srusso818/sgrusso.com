@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-density="comprehensive">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stephen G. Russo — Executive Résumé (Print / PDF)</title>
+  <meta
+    name="description"
+    content="Printable executive résumé of Stephen G. Russo — Senior Systems Engineer, Infrastructure Leader, and Enterprise AI Architect."
+  />
+  <link rel="canonical" href="https://sgrusso.com/resume.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("sgr-theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/resume.css" />
+</head>
+<body>
+  <!-- Non-Printing Toolbar -->
+  <header class="resume-toolbar">
+    <div class="toolbar-left">
+      <a href="index.html" class="tool-btn">← SGRusso.com</a>
+      <button type="button" class="tool-btn is-selected" id="btn-comprehensive">
+        Comprehensive View
+      </button>
+      <button type="button" class="tool-btn" id="btn-concise">
+        Concise 2-Page View
+      </button>
+    </div>
+
+    <div class="toolbar-right">
+      <button type="button" class="tool-btn" id="res-theme-toggle">
+        Switch Theme
+      </button>
+      <button type="button" class="tool-btn tool-btn--primary" id="btn-print">
+        Print / Save as PDF
+      </button>
+    </div>
+  </header>
+
+  <main class="sheet-stage">
+    <article class="resume-sheet" aria-label="Curriculum Vitae of Stephen G. Russo">
+      <!-- Masthead -->
+      <header class="res-masthead">
+        <div>
+          <h1 class="res-name">Stephen G. Russo</h1>
+          <p class="res-title">Senior Systems Engineer · Infrastructure &amp; Enterprise AI Architect</p>
+        </div>
+        <div class="res-contact">
+          <div>Northwest Arkansas (Fayetteville / Prairie Grove, AR)</div>
+          <div>
+            <a href="tel:+14799570455">(479) 957-0455</a> ·
+            <a href="mailto:stephen@sgrusso.com">stephen@sgrusso.com</a> ·
+            <a href="https://sgrusso.com">sgrusso.com</a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/stephen-russo-506b18" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/stephen-russo-506b18
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Executive Summary -->
+      <section class="res-section">
+        <h2 class="res-sec-heading">Executive Profile</h2>
+        <p class="res-summary">
+          Senior Systems Engineer and Infrastructure Leader with 20+ years of experience designing, modernizing, and operating high-availability datacenters across public-sector government and $1T+ institutional financial-services environments. Proven track record leading zero-disruption VMware vSphere and enterprise SAN migrations, internal PKI and supervised MDM architectures, cyber-resilient backup vaulting, hybrid Microsoft 365 messaging, and sovereign on-premises NVIDIA H100 enterprise AI infrastructure. Trusted escalation lead for executives, trading desks, and elected officials.
+        </p>
+      </section>
+
+      <!-- Core Technical Domains -->
+      <section class="res-section">
+        <h2 class="res-sec-heading">Core Technical Architecture</h2>
+        <div class="res-skill-rows">
+          <div class="res-skill-row">
+            <span class="res-skill-cat">Enterprise AI &amp; GPU</span>
+            <span class="res-skill-list">NVIDIA H100 Multi-GPU Infrastructure, vLLM, Meta Llama 3.3 70B Instruct, Open WebUI, FLUX &amp; ComfyUI, Python FastAPI, Redis Queues, Docker, Sovereign RAG, OpenAI-Compatible APIs</span>
+          </div>
+          <div class="res-skill-row">
+            <span class="res-skill-cat">Virtualization &amp; SAN</span>
+            <span class="res-skill-list">VMware vSphere 8, ESXi, vCenter, vMotion, Dell PowerStore SAN, iSCSI Fabrics, Dell EMC Data Domain, Veeam Backup &amp; Replication, Quantum Scalar i3 LTO-9 Tape, Synology NAS</span>
+          </div>
+          <div class="res-skill-row">
+            <span class="res-skill-cat">Microsoft &amp; Hybrid Cloud</span>
+            <span class="res-skill-list">Windows Server, Active Directory DS, Group Policy, DNS/DHCP, Exchange Server 2019 CU15, Microsoft 365, Entra ID, AD CS / Enterprise PKI, SQL Server / SSRS, RDS, PowerShell</span>
+          </div>
+          <div class="res-skill-row">
+            <span class="res-skill-cat">Security, PKI &amp; Mobility</span>
+            <span class="res-skill-list">NDES / SCEP, Proofpoint Essentials, Cisco ESA, SPF / DKIM / DMARC, Duo MFA, Ivanti Neurons &amp; Sentry MDM, Apple Business Manager, DigiCert TLS, CrowdStrike, Netwrix, Incident Response</span>
+          </div>
+          <div class="res-skill-row">
+            <span class="res-skill-cat">Networking &amp; Platforms</span>
+            <span class="res-skill-list">Cisco Routing/Switching, Cisco Meraki SD-WAN, Dark-Fiber Campus Interconnects, VLAN Segmentation, Firewalls/VPN, Cisco CUCM, Esri ArcGIS, CentralSquare, Karpel, KACE SMA/SDA</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Selected Flagship Accomplishments -->
+      <section class="res-section">
+        <h2 class="res-sec-heading">Selected Enterprise Architecture Highlights</h2>
+        <div class="res-projects-grid">
+          <div class="res-proj-item">
+            <strong>GEORGE Sovereign AI Platform:</strong>
+            <span>Engineered on-premises NVIDIA H100 cluster serving Llama 3.3 70B (vLLM), FLUX/ComfyUI, FastAPI/Redis, Open WebUI, and Cisco CUCM voice prototypes.</span>
+          </div>
+          <div class="res-proj-item">
+            <strong>vSphere 8 &amp; PowerStore SAN Refresh:</strong>
+            <span>Redesigned iSCSI/vMotion fabrics and migrated dual-campus production workloads from legacy Dell EMC SANs to replicated Dell PowerStore arrays.</span>
+          </div>
+          <div class="res-proj-item">
+            <strong>Zero-Trust PKI &amp; Supervised MDM:</strong>
+            <span>Integrated Microsoft AD CS, NDES/SCEP, Ivanti Neurons/Sentry, Apple Business Manager, and Duo MFA for automated mobile certificate auth.</span>
+          </div>
+          <div class="res-proj-item">
+            <strong>Cyber-Resilient Backup &amp; Mail Defense:</strong>
+            <span>Architected Veeam + Data Domain + LTO-9 air-gapped tape DR; migrated Cisco ESA to Proofpoint Essentials with enforced SPF/DKIM/DMARC.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="res-section">
+        <h2 class="res-sec-heading">Professional Experience</h2>
+
+        <div class="res-job">
+          <div class="res-job-head">
+            <span class="res-job-org">Russo Technology Consulting <span class="res-job-loc">— Prairie Grove, AR</span></span>
+            <span class="res-job-dates">2026 – Present</span>
+          </div>
+          <div class="res-job-role">Founder &amp; Principal Technology Consultant</div>
+          <ul class="res-bullets">
+            <li>Lead independent infrastructure modernization, cybersecurity hardening, backup resiliency, and cloud advisory engagements for regional organizations from architectural discovery through documented handoff.</li>
+            <li class="extended-detail">Design and deploy production web properties utilizing Git-based deployment pipelines, custom DNS governance, and modern TLS lifecycle management.</li>
+          </ul>
+        </div>
+
+        <div class="res-job">
+          <div class="res-job-head">
+            <span class="res-job-org">Washington County Government <span class="res-job-loc">— Fayetteville, AR</span></span>
+            <span class="res-job-dates">2022 – 2026</span>
+          </div>
+          <div class="res-job-role">Systems Administrator &amp; Infrastructure Lead</div>
+          <ul class="res-bullets">
+            <li>Administered and modernized mission-critical infrastructure across two campuses supporting 350+ employees across Courts, Law Enforcement, Detention, Finance, GIS, and Public Services.</li>
+            <li>Architected and deployed <strong>GEORGE</strong>, an on-premises enterprise AI platform built on NVIDIA H100 GPUs running Meta Llama 3.3 70B (vLLM), FLUX/ComfyUI, FastAPI/Redis orchestration, Open WebUI, internal RAG architecture, and Cisco CUCM voice-assistant / ArcGIS deep-learning prototypes.</li>
+            <li>Directed a dual-campus VMware vSphere 8 cluster modernization and live SAN migration from legacy Dell EMC storage to Dell PowerStore with cross-campus replication and zero unplanned downtime.</li>
+            <li>Engineered internal enterprise PKI (AD CS, NDES/SCEP) integrated with Ivanti Neurons for MDM, Ivanti Sentry, and Apple Business Manager for supervised iOS enrollment and certificate-backed ActiveSync.</li>
+            <li>Maintained Exchange Server 2019 (CU15) and hybrid Microsoft 365 / Entra ID; migrated email gateway security from Cisco ESA to Proofpoint Essentials with strict SPF, DKIM, DMARC, and DigiCert TLS governance.</li>
+            <li>Modernized backup and disaster recovery across Veeam Backup &amp; Replication, Dell EMC Data Domain, Synology NAS, and Quantum Scalar i3 LTO-9 tape libraries; administered dark-fiber campus links and Meraki SD-WAN.</li>
+            <li class="extended-detail">Built and supported dedicated environments for Esri ArcGIS, CentralSquare financial systems, Karpel cloud case-management migration, SQL Server/SSRS, and KACE endpoint deployment.</li>
+            <li>Formally recognized by County Judge Joseph Wood for frontline technical leadership on the Cybersecurity Incident Response Team during the 2022 countywide security incident.</li>
+          </ul>
+        </div>
+
+        <div class="res-job">
+          <div class="res-job-head">
+            <span class="res-job-org">Edge Technology Group <span class="res-job-loc">— Greenwich, CT</span></span>
+            <span class="res-job-dates">2017 – 2021</span>
+          </div>
+          <div class="res-job-role">Team Lead &amp; Senior Escalation Engineer</div>
+          <ul class="res-bullets">
+            <li>Served as senior technical escalation point at a premier financial MSP supporting 500+ hedge funds, private equity firms, and institutional trading desks managing over $1 trillion in combined assets (~30% YoY growth).</li>
+            <li>Conceived and spearheaded development of “Client Viewer,” unifying critical client topology and operational runbooks for 200+ engineers—significantly reducing human error and escalation MTTR.</li>
+            <li class="extended-detail">Partnered directly with portfolio managers, CTOs, and executive teams to resolve complex datacenter, server, and network escalations and plan scalable infrastructure expansions.</li>
+          </ul>
+        </div>
+
+        <div class="res-job">
+          <div class="res-job-head">
+            <span class="res-job-org">Jennison Associates <span class="res-job-loc">— New York, NY</span></span>
+            <span class="res-job-dates">2014 – 2017</span>
+          </div>
+          <div class="res-job-role">Senior Service Technician / Systems Lead</div>
+          <ul class="res-bullets">
+            <li>Administered systems and high-touch support across 430 servers and 500 workstations within an active institutional asset management environment ($189B AUM).</li>
+            <li>Led 400+ user migration from legacy BES to MobileIron iOS MDM, directed a 300+ workstation SSD/RAM hardware refresh, and deployed Acronis disaster recovery across 250 endpoints.</li>
+            <li class="extended-detail">Engineered custom Windows Server 2012 R2 developer images and reconciled configuration drift across Active Directory, DNS, GPO, VMware, SEP, and LDMS.</li>
+          </ul>
+        </div>
+
+        <div class="res-job">
+          <div class="res-job-head">
+            <span class="res-job-org">K2 Advisors (Franklin Templeton) <span class="res-job-loc">— Stamford, CT</span></span>
+            <span class="res-job-dates">2007 – 2014</span>
+          </div>
+          <div class="res-job-role">Assistant Vice President of Information Technology</div>
+          <ul class="res-bullets">
+            <li>Maintained 99%+ uptime across 90 virtual servers, 11 ESXi hosts, and 9 EqualLogic SANs supporting global offices in the US, UK, Tokyo, Hong Kong, and Australia during AUM expansion from $7B to $10B+ and acquisition by Franklin Templeton.</li>
+            <li>Led full P2V datacenter consolidation on VMware vSphere and HP Blade Systems, managed 20+ enterprise vendor relationships, and implemented IDS/IPS, RSA SecurID, WebSense, and Dell KACE security controls.</li>
+          </ul>
+        </div>
+
+        <div class="res-job extended-detail">
+          <div class="res-job-head">
+            <span class="res-job-org">J. Brown Advertising / G2 Promotional Marketing <span class="res-job-loc">— Stamford, CT</span></span>
+            <span class="res-job-dates">2004 – 2007</span>
+          </div>
+          <div class="res-job-role">IT / Network Administrator</div>
+          <ul class="res-bullets">
+            <li>Supported 150 users across Stamford, Cincinnati, Chicago, and Dallas; led cross-platform migration from Mac OS 9 to Windows Server 2003, Active Directory, and Mac OS X Server through Grey Worldwide acquisition.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education & Certifications -->
+      <section class="res-section">
+        <h2 class="res-sec-heading">Certifications &amp; Education</h2>
+        <div class="res-edu-grid">
+          <div class="res-edu-item">
+            <strong>CompTIA A+ Certified CE</strong>
+            <span>Active Continuing Education Certification (2023)</span>
+          </div>
+          <div class="res-edu-item">
+            <strong>Associate of Science in Computer Science</strong>
+            <span>Gibbs College, Norwalk, CT · 3.9 GPA · Dean’s List Award</span>
+          </div>
+          <div class="res-edu-item">
+            <strong>Computer Science &amp; Ethics Coursework</strong>
+            <span>University of Bridgeport, Bridgeport, CT</span>
+          </div>
+          <div class="res-edu-item">
+            <strong>Microsoft Windows Server &amp; Active Directory</strong>
+            <span>New Horizons Technical Training, Trumbull, CT</span>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btnComp = document.getElementById("btn-comprehensive");
+      var btnConcise = document.getElementById("btn-concise");
+      var btnTheme = document.getElementById("res-theme-toggle");
+      var btnPrint = document.getElementById("btn-print");
+
+      if (btnComp && btnConcise) {
+        btnComp.addEventListener("click", function () {
+          root.setAttribute("data-density", "comprehensive");
+          btnComp.classList.add("is-selected");
+          btnConcise.classList.remove("is-selected");
+        });
+        btnConcise.addEventListener("click", function () {
+          root.setAttribute("data-density", "concise");
+          btnConcise.classList.add("is-selected");
+          btnComp.classList.remove("is-selected");
+        });
+      }
+
+      if (btnTheme) {
+        btnTheme.addEventListener("click", function () {
+          var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+          try {
+            localStorage.setItem("sgr-theme", next);
+          } catch (e) {}
+        });
+      }
+
+      if (btnPrint) {
+        btnPrint.addEventListener("click", function () {
+          window.print();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+

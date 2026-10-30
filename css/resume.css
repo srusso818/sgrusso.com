@@ -1,0 +1,424 @@
+/* ==========================================================================
+   SGRusso.com — Executive Print & Screen Résumé Engine
+   Screen: matches DESIGN.md tokens. Print: razor-sharp ATS-clean paper sheet.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-recessed);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  line-height: 1.52;
+  -webkit-font-smoothing: antialiased;
+}
+
+.resume-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: var(--bg-canvas);
+  background-color: color-mix(in oklch, var(--bg-canvas) 92%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolbar-left,
+.toolbar-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 13px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--border-strong);
+  background-color: var(--bg-surface);
+  color: var(--ink-primary);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.tool-btn:hover {
+  background-color: var(--bg-hover);
+}
+
+.tool-btn--primary {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--accent-ink);
+  font-weight: 500;
+}
+
+.tool-btn--primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.tool-btn.is-selected {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* Paper Sheet Container */
+.sheet-stage {
+  padding: 36px 16px 64px;
+}
+
+.resume-sheet {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 52px 56px;
+}
+
+/* Masthead */
+.res-masthead {
+  border-bottom: 2px solid var(--ink-primary);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.res-name {
+  margin: 0 0 4px;
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink-primary);
+}
+
+.res-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.res-contact {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.55;
+  color: var(--ink-secondary);
+}
+
+.res-contact a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.res-contact a:hover {
+  color: var(--accent-primary);
+}
+
+/* Sections */
+.res-section {
+  margin-bottom: 20px;
+}
+
+.res-section:last-child {
+  margin-bottom: 0;
+}
+
+.res-sec-heading {
+  margin: 0 0 10px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-primary);
+}
+
+.res-summary {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.56;
+  color: var(--ink-primary);
+}
+
+/* Core Competencies Compact Matrix */
+.res-skill-rows {
+  display: grid;
+  gap: 6px;
+  font-size: 0.84rem;
+}
+
+.res-skill-row {
+  display: grid;
+  grid-template-columns: 185px 1fr;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.res-skill-cat {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--ink-primary);
+}
+
+.res-skill-list {
+  color: var(--ink-secondary);
+  line-height: 1.45;
+}
+
+/* Selected Projects Strip */
+.res-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
+.res-proj-item {
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.res-proj-item strong {
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+.res-proj-item span {
+  color: var(--ink-secondary);
+}
+
+/* Experience Entries */
+.res-job {
+  margin-bottom: 15px;
+}
+
+.res-job:last-child {
+  margin-bottom: 0;
+}
+
+.res-job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.res-job-org {
+  font-size: 0.96rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+}
+
+.res-job-loc {
+  font-weight: 400;
+  color: var(--ink-secondary);
+  font-size: 0.85rem;
+}
+
+.res-job-dates {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.res-job-role {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-secondary);
+  margin-bottom: 5px;
+}
+
+.res-bullets {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  line-height: 1.48;
+  color: var(--ink-primary);
+}
+
+.res-bullets li {
+  margin-bottom: 3.5px;
+}
+
+.res-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* Concise Mode hides extended historical bullets */
+[data-density="concise"] .extended-detail {
+  display: none;
+}
+
+/* Education Grid */
+.res-edu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 20px;
+  font-size: 0.84rem;
+}
+
+.res-edu-item strong {
+  display: block;
+  color: var(--ink-primary);
+  font-weight: 600;
+}
+
+.res-edu-item span {
+  color: var(--ink-secondary);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 720px) {
+  .resume-sheet {
+    padding: 28px 22px;
+  }
+
+  .res-masthead {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .res-contact {
+    text-align: left;
+  }
+
+  .res-skill-row,
+  .res-projects-grid,
+  .res-edu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Print / Save-as-PDF Stylesheet
+   Forces crisp ink-on-white publication typography regardless of dark mode
+   ========================================================================== */
+
+@page {
+  size: letter portrait;
+  margin: 0.45in 0.5in;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 10pt;
+  }
+
+  .resume-toolbar {
+    display: none !important;
+  }
+
+  .sheet-stage {
+    padding: 0 !important;
+  }
+
+  .resume-sheet {
+    max-width: 100% !important;
+    border: none !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .res-masthead {
+    border-bottom: 1.5pt solid #111827 !important;
+    padding-bottom: 8pt !important;
+    margin-bottom: 10pt !important;
+  }
+
+  .res-name {
+    color: #0f172a !important;
+    font-size: 20pt !important;
+  }
+
+  .res-title {
+    color: #7c3a12 !important;
+    font-size: 8pt !important;
+  }
+
+  .res-contact,
+  .res-skill-list,
+  .res-proj-item span,
+  .res-job-loc,
+  .res-job-role,
+  .res-edu-item span {
+    color: #334155 !important;
+  }
+
+  .res-contact a {
+    border-bottom: none !important;
+    color: #1e293b !important;
+  }
+
+  .res-sec-heading {
+    color: #0f172a !important;
+    border-bottom: 0.75pt solid #94a3b8 !important;
+    margin-bottom: 6pt !important;
+    font-size: 7.5pt !important;
+  }
+
+  .res-summary,
+  .res-skill-cat,
+  .res-proj-item strong,
+  .res-job-org,
+  .res-bullets,
+  .res-edu-item strong {
+    color: #111827 !important;
+  }
+
+  .res-job-dates {
+    color: #475569 !important;
+  }
+
+  .res-section {
+    margin-bottom: 11pt !important;
+  }
+
+  .res-job {
+    margin-bottom: 9pt !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .res-edu-grid,
+  .res-projects-grid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
