@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <!-- Hallmark · macrostructure: asymmetric-technical-dossier -->
-  <!-- Impeccable · OKLCH tinted neutrals, 3-voice typography, zero nested card slop -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stephen G. Russo — Senior Systems Engineer &amp; Infrastructure Architect</title>
+  <title>Stephen G. Russo — Datacenter Modernization, Sovereign AI &amp; Systems Architecture</title>
   <meta
     name="description"
-    content="Portfolio and architectural dossier of Stephen G. Russo — Senior Systems Engineer and Infrastructure Leader with 20+ years across enterprise virtualization, SAN storage, zero-trust PKI, institutional finance, and sovereign NVIDIA H100 AI platforms."
+    content="Stephen G. Russo — Senior Systems Engineer &amp; Infrastructure Architect specializing in datacenter modernization, cloud repatriation, on-premises NVIDIA H100 AI, air-gapped disaster recovery, zero-trust cybersecurity, and DevOps automation."
   />
   <link rel="canonical" href="https://sgrusso.com/" />
 
-  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sgrusso.com/" />
-  <meta property="og:title" content="Stephen G. Russo — Senior Systems Engineer &amp; Infrastructure Architect" />
+  <meta property="og:title" content="Stephen G. Russo — Sovereign Infrastructure &amp; Enterprise AI Architect" />
   <meta
     property="og:description"
-    content="20+ years engineering resilient enterprise infrastructure across $1T+ institutional finance and public-sector datacenters—from VMware vSphere 8 &amp; Dell PowerStore SANs to on-premises NVIDIA H100 AI."
+    content="Modernize the datacenter. Own your AI. Cut the cloud tax. 20+ years engineering resilient vSphere 8, PowerStore SAN, air-gapped DR, zero-trust PKI, and on-premises H100 AI infrastructure."
   />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
-  <!-- Prevent theme flash before paint -->
   <script>
     (function () {
       try {
@@ -36,18 +32,16 @@
     })();
   </script>
 
-  <!-- Typography: IBM Plex Sans + Newsreader + IBM Plex Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="css/tokens.css" />
   <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -67,485 +61,482 @@
         "https://www.linkedin.com/in/stephen-russo-506b18"
       ],
       "knowsAbout": [
-        "Enterprise Infrastructure Architecture",
-        "VMware vSphere 8",
-        "Dell PowerStore SAN",
-        "Microsoft Active Directory & PKI",
-        "NVIDIA H100 Enterprise AI Infrastructure",
-        "vLLM & Sovereign LLM Deployment",
-        "Cybersecurity & Disaster Recovery"
+        "Datacenter Modernization",
+        "Cloud Repatriation",
+        "On-Premises Enterprise AI (NVIDIA H100 / vLLM)",
+        "Air-Gapped Disaster Recovery",
+        "Systems Architecture",
+        "Cybersecurity & Zero-Trust PKI",
+        "DevOps & Infrastructure Automation"
       ]
     }
   </script>
 </head>
-<body>
-  <a href="#main-content" class="skip-link">Skip to architectural dossier</a>
+<body id="top">
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <!-- Top Specification Header Rail -->
+  <!-- Clean Floating Architectural Header -->
   <header class="site-header">
-    <div class="header-inner">
-      <a href="#top" class="brand-cell" aria-label="Stephen G. Russo Home">
-        <span class="brand-monogram" aria-hidden="true">SGR</span>
-        <span class="brand-meta">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Stephen G. Russo Home">
+        <span class="brand-mark" aria-hidden="true">SGR</span>
+        <span class="brand-text">
           <span class="brand-name">Stephen G. Russo</span>
-          <span class="brand-role">Systems &amp; AI Infrastructure</span>
+          <span class="brand-tag">Infrastructure · AI · Security</span>
         </span>
       </a>
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Section navigation">
-        <a href="#ai-architecture" class="nav-link"><span class="nav-idx">01</span>AI Platform</a>
-        <a href="#case-studies" class="nav-link"><span class="nav-idx">02</span>Case Studies</a>
-        <a href="#capabilities" class="nav-link"><span class="nav-idx">03</span>Capabilities</a>
-        <a href="#career" class="nav-link"><span class="nav-idx">04</span>Career Ledger</a>
-        <a href="#contact" class="nav-link"><span class="nav-idx">05</span>Contact</a>
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#pillars" class="nav-item">Architecture</a>
+        <a href="#sovereignty" class="nav-item">Cloud Exit</a>
+        <a href="#deliveries" class="nav-item">Deliveries</a>
+        <a href="#career" class="nav-item">Career</a>
+        <a href="#contact" class="nav-item">Contact</a>
       </nav>
 
-      <div class="header-controls">
+      <div class="header-actions">
         <button
           type="button"
-          class="rail-btn"
+          class="icon-btn"
           id="cmd-open-btn"
-          title="Quick jump across sections and case studies (Ctrl+K / ⌘K)"
+          title="Quick jump (Ctrl+K / ⌘K)"
         >
-          <span class="cmd-btn-label">JUMP</span>
-          <span class="kbd-hint">⌘K</span>
+          <span>⌘K</span>
         </button>
 
         <button
           type="button"
-          class="rail-btn"
+          class="icon-btn"
           id="theme-toggle"
-          aria-label="Switch visual theme"
+          aria-label="Toggle theme"
         >
           <span id="theme-label">PAPER</span>
         </button>
 
-        <a href="resume.html" class="rail-btn rail-btn--resume">
-          RÉSUMÉ / PDF ↗
-        </a>
+        <a href="resume.html" class="header-cta">Résumé / PDF ↗</a>
 
         <button
           type="button"
-          class="rail-btn mobile-menu-btn"
+          class="icon-btn mobile-toggle"
           id="mobile-menu-btn"
           aria-expanded="false"
-          aria-controls="primary-nav"
+          aria-controls="site-nav"
         >
-          INDEX
+          MENU
         </button>
       </div>
     </div>
-    <div class="scroll-progress-track" aria-hidden="true">
-      <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
-    </div>
+    <div class="scroll-line" id="scroll-progress-bar" aria-hidden="true"></div>
   </header>
 
-  <div class="dossier-shell" id="top">
-    <main id="main-content">
-      <!-- 00 // Asymmetric Blueprint Hero -->
-      <section class="hero-section" aria-labelledby="hero-heading">
-        <div class="hero-editorial">
-          <canvas id="hero-signal-canvas" class="hero-signal-canvas" aria-hidden="true"></canvas>
-          <div class="hero-content-layer">
-            <div class="telemetry-line hero-stagger hero-stagger-1">
-              <span class="status-dot" aria-hidden="true"></span>
-              <span>Northwest Arkansas &amp; Hybrid · Senior Systems &amp; Infrastructure Leadership</span>
-            </div>
-
-            <h1 class="hero-headline hero-stagger hero-stagger-2" id="hero-heading">
-              Architecting resilient core infrastructure—from <em>sovereign H100 AI</em> to zero-downtime datacenters.
-            </h1>
-
-            <p class="hero-lead hero-stagger hero-stagger-3">
-              <strong>Stephen G. Russo</strong> is a Senior Systems Engineer and Infrastructure Leader with over twenty years of operational command across <strong>$1T+ institutional finance</strong> and <strong>public-sector government environments</strong>—modernizing VMware vSphere clusters, Dell PowerStore SANs, zero-trust PKI, cyber-resilient backups, and on-premises enterprise AI.
-            </p>
+  <main id="main-content">
+    <!-- ====================================================================
+         BAND 00: HERO — Spacious Split + Interactive 3D Sovereign Stack
+         ==================================================================== -->
+    <section class="band band--hero" aria-labelledby="hero-title">
+      <div class="hero-ambient-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="status-pill">
+            <span class="status-pulse" aria-hidden="true"></span>
+            <span>Systems &amp; Infrastructure Architect · Northwest Arkansas</span>
           </div>
 
-          <div class="hero-actions hero-content-layer hero-stagger hero-stagger-4">
-            <a href="#case-studies" class="btn btn-primary">Inspect Case Studies ↓</a>
-            <a href="resume.html" class="btn btn-secondary">Executive Résumé (Print / PDF)</a>
-            <a href="#contact" class="btn btn-ghost">Direct Dispatch →</a>
-          </div>
-        </div>
+          <h1 class="hero-title" id="hero-title">
+            Modernize the datacenter.<br />
+            <em>Own your AI.</em><br />
+            Cut the cloud tax.
+          </h1>
 
-        <aside class="hero-ledger hero-stagger hero-stagger-3" aria-label="Executive Specification Summary">
-          <div class="ledger-header">
-            <span>Dossier Spec // SGR-2026</span>
-            <span id="live-clock">REV 04.26</span>
-          </div>
+          <p class="hero-sub">
+            20+ years designing zero-downtime on-premises infrastructure, air-gapped disaster recovery, zero-trust security, DevOps pipelines, and sovereign NVIDIA H100 AI—eliminating pricey cloud lock-in across public-sector and $1T+ financial environments.
+          </p>
 
-          <div class="ledger-metrics">
-            <div class="metric-cell spotlight-surface">
-              <span class="metric-value" data-metric-target="20" data-metric-suffix="+ Yrs">20+ Yrs</span>
-              <span class="metric-label">Enterprise Systems &amp; Datacenter Engineering</span>
-            </div>
-            <div class="metric-cell spotlight-surface">
-              <span class="metric-value" data-metric-decode="H100">H100</span>
-              <span class="metric-label">On-Premises Sovereign LLM &amp; Multimodal AI</span>
-            </div>
-            <div class="metric-cell spotlight-surface">
-              <span class="metric-value" data-metric-prefix="$" data-metric-target="1" data-metric-suffix="T+">$1T+</span>
-              <span class="metric-label">Institutional Finance Client AUM Supported</span>
-            </div>
-            <div class="metric-cell spotlight-surface">
-              <span class="metric-value" data-metric-target="99" data-metric-suffix="%+">99%+</span>
-              <span class="metric-label">Multi-Site Cluster, SAN &amp; Network Availability</span>
-            </div>
+          <div class="hero-cta-row">
+            <a href="#pillars" class="btn btn--primary magnetic">Explore Architecture ↓</a>
+            <a href="resume.html" class="btn btn--secondary magnetic">Executive Résumé</a>
+            <a href="#contact" class="btn btn--ghost">Get in Touch →</a>
           </div>
 
-          <div class="ledger-rows">
-            <div class="ledger-row">
-              <span class="ledger-key">Target Roles</span>
-              <span class="ledger-val">Sr. Systems Engineer · Infrastructure Architect · IT Infrastructure Lead</span>
+          <div class="hero-stats" aria-label="Key Career Metrics">
+            <div class="stat-item">
+              <span class="stat-num" data-count="20" data-suffix="+ Yrs">20+ Yrs</span>
+              <span class="stat-cap">Enterprise Architecture</span>
             </div>
-            <div class="ledger-row">
-              <span class="ledger-key">Core Stack</span>
-              <span class="ledger-val">vSphere 8 · PowerStore SAN · AD CS / PKI · Hybrid M365 · Veeam / LTO-9 · vLLM</span>
+            <div class="stat-item">
+              <span class="stat-num">$0/tok</span>
+              <span class="stat-cap">On-Prem H100 AI Egress</span>
             </div>
-            <div class="ledger-row">
-              <span class="ledger-key">Region</span>
-              <span class="ledger-val">Northwest Arkansas (Fayetteville / Prairie Grove, AR)</span>
+            <div class="stat-item">
+              <span class="stat-num">3-2-1-1</span>
+              <span class="stat-cap">LTO-9 Air-Gapped DR</span>
             </div>
-            <div class="ledger-row">
-              <span class="ledger-key">Direct Mail</span>
-              <span class="ledger-val"><a href="mailto:stephen@sgrusso.com">stephen@sgrusso.com</a></span>
+            <div class="stat-item">
+              <span class="stat-num" data-prefix="$" data-count="1" data-suffix="T+">$1T+</span>
+              <span class="stat-cap">Finance AUM Supported</span>
             </div>
-            <div class="ledger-row">
-              <span class="ledger-key">Telephone</span>
-              <span class="ledger-val"><a href="tel:+14799570455">(479) 957-0455</a></span>
-            </div>
-            <div class="ledger-row">
-              <span class="ledger-key">Network</span>
-              <span class="ledger-val">
-                <a href="https://www.linkedin.com/in/stephen-russo-506b18" target="_blank" rel="noopener noreferrer">
-                  linkedin.com/in/stephen-russo-506b18 ↗
-                </a>
-              </span>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- 01 // Flagship Spotlight: Sovereign On-Premises Enterprise AI Platform -->
-      <section class="dossier-section" id="ai-architecture" aria-labelledby="ai-heading">
-        <div class="section-rail">
-          <div class="section-index-cell">
-            <span class="section-index-num">01 // ARCHITECTURE</span>
-            <span>Sovereign AI Infrastructure</span>
-          </div>
-          <div class="section-title-cell">
-            <h2 class="section-title" id="ai-heading">
-              Sovereign On-Premises Enterprise AI Platform
-            </h2>
-            <p class="section-subtitle">
-              Designed, deployed, and integrated a privately hosted, multi-GPU artificial intelligence platform for Washington County Government—delivering frontier 70B-parameter reasoning and multimodal generation with zero external data egress.
-            </p>
           </div>
         </div>
 
-        <div class="ai-platform-layout" id="ai-platform-layout">
-          <div class="ai-diagram-pane">
-            <div class="diagram-toolbar">
-              <span class="diagram-caption">Interactive System Topology — Select a layer to inspect</span>
-              <span class="diagram-caption tour-badge" id="ai-tour-status">
-                <span class="tour-dot" aria-hidden="true"></span>
-                <span>AUTO-TELEMETRY · HOVER TO HOLD</span>
-              </span>
+        <!-- Interactive 3D Isometric Infrastructure Visualizer -->
+        <div class="hero-stage">
+          <div class="stage-card">
+            <div class="stage-top-bar">
+              <span class="stage-title">SOVEREIGN STACK // 3D TOPOLOGY</span>
+              <span class="stage-hint">DRAG OR HOVER TO INSPECT</span>
             </div>
 
-            <div
-              class="topology-stack"
-              id="ai-topology"
-              role="tablist"
-              aria-label="Enterprise AI Architecture Layers"
-            >
+            <div class="canvas-3d-wrap" id="canvas-3d-wrap">
+              <canvas id="stack-3d-canvas" aria-label="Interactive 3D Sovereign Infrastructure Stack"></canvas>
+            </div>
+
+            <div class="stage-hud" id="stage-hud" aria-live="polite">
+              <div class="hud-left">
+                <span class="hud-code" id="hud-code">LAYER 04</span>
+                <strong class="hud-name" id="hud-name">Sovereign Enterprise AI</strong>
+                <span class="hud-sub" id="hud-sub">NVIDIA H100 · vLLM · Llama 3.3 70B · $0 Cloud Token Egress</span>
+              </div>
+              <span class="hud-badge" id="hud-metric">100% On-Prem Privacy</span>
+            </div>
+
+            <div class="deck-tabs" id="deck-tabs" role="tablist" aria-label="Select 3D Architecture Layer">
               <!-- Populated by js/main.js -->
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div
-            class="ai-inspector-pane"
-            id="ai-inspector"
-            role="tabpanel"
-            aria-live="polite"
-          >
+    <!-- ====================================================================
+         BAND 01: SIX PILLARS — Scroll-Pinned Live Schematic + Concise Cards
+         ==================================================================== -->
+    <section class="band band--alt" id="pillars" aria-labelledby="pillars-heading">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="chapter-tag">01 — CORE DISCIPLINES</span>
+          <h2 class="section-heading" id="pillars-heading">
+            Built for resilience, sovereignty, and speed.
+          </h2>
+          <p class="section-lead">
+            Six integrated disciplines engineered to modernize legacy environments while keeping performance, security, and budgets firmly under your control.
+          </p>
+        </div>
+
+        <div class="pillars-split">
+          <!-- Sticky Live Morphing Architecture Schematic -->
+          <div class="pillars-sticky-wrap">
+            <div class="schematic-panel" id="schematic-panel">
+              <div class="schematic-head">
+                <span class="schematic-index" id="schematic-index">01 / 06</span>
+                <span class="schematic-kicker" id="schematic-kicker">Cloud Repatriation &amp; Core Refresh</span>
+              </div>
+
+              <div class="schematic-svg-stage">
+                <svg
+                  id="live-schematic-svg"
+                  viewBox="0 0 460 270"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <!-- Subtle Background Blueprint Crosshairs -->
+                  <g stroke="currentColor" stroke-opacity="0.08" stroke-width="1">
+                    <line x1="0" y1="65" x2="460" y2="65" />
+                    <line x1="0" y1="135" x2="460" y2="135" />
+                    <line x1="0" y1="205" x2="460" y2="205" />
+                    <line x1="115" y1="0" x2="115" y2="270" />
+                    <line x1="230" y1="0" x2="230" y2="270" />
+                    <line x1="345" y1="0" x2="345" y2="270" />
+                  </g>
+
+                  <!-- Base Conduit Paths -->
+                  <g class="schem-wires" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.5">
+                    <path d="M125 65 H230 V135" />
+                    <path d="M335 65 H230 V135" />
+                    <path d="M125 205 H230 V135" />
+                    <path d="M335 205 H230 V135" />
+                  </g>
+
+                  <!-- Animated Laser Signal Pulses -->
+                  <g class="schem-pulses" stroke-width="2" stroke-linecap="round">
+                    <path class="laser-path laser-1" d="M125 65 H230 V135" />
+                    <path class="laser-path laser-2" d="M230 135 V65 H335" />
+                    <path class="laser-path laser-3" d="M230 135 V205 H125" />
+                    <path class="laser-path laser-4" d="M230 135 V205 H335" />
+                  </g>
+
+                  <!-- 4 Outer Subsystem Nodes -->
+                  <g class="schem-node" id="snode-0" transform="translate(22, 42)">
+                    <rect width="128" height="46" rx="6" class="snode-box" />
+                    <circle cx="16" cy="23" r="4" class="snode-dot" />
+                    <text x="28" y="27" class="snode-label" id="snode-text-0">vSphere 8 Cluster</text>
+                  </g>
+
+                  <g class="schem-node" id="snode-1" transform="translate(310, 42)">
+                    <rect width="128" height="46" rx="6" class="snode-box" />
+                    <circle cx="16" cy="23" r="4" class="snode-dot" />
+                    <text x="28" y="27" class="snode-label" id="snode-text-1">PowerStore SAN</text>
+                  </g>
+
+                  <g class="schem-node" id="snode-2" transform="translate(22, 182)">
+                    <rect width="128" height="46" rx="6" class="snode-box" />
+                    <circle cx="16" cy="23" r="4" class="snode-dot" />
+                    <text x="28" y="27" class="snode-label" id="snode-text-2">10/25GbE iSCSI</text>
+                  </g>
+
+                  <g class="schem-node" id="snode-3" transform="translate(310, 182)">
+                    <rect width="128" height="46" rx="6" class="snode-box" />
+                    <circle cx="16" cy="23" r="4" class="snode-dot" />
+                    <text x="28" y="27" class="snode-label" id="snode-text-3">Campus Replica</text>
+                  </g>
+
+                  <!-- Central Core Hub -->
+                  <g transform="translate(166, 105)">
+                    <rect width="128" height="60" rx="8" class="shub-box" />
+                    <text x="64" y="26" text-anchor="middle" class="shub-eyebrow">SOVEREIGN CORE</text>
+                    <text x="64" y="45" text-anchor="middle" class="shub-title" id="shub-mode">DATACENTER</text>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="schematic-footer">
+                <div>
+                  <span class="schem-metric-label" id="schem-metric-label">Workload Cutover Disruption</span>
+                  <strong class="schem-metric-val" id="schem-metric-val">0 min</strong>
+                </div>
+                <span class="schem-live-pill">
+                  <span class="status-pulse" aria-hidden="true"></span>
+                  TELEMETRY ACTIVE
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrolling Concise Pillar Cards -->
+          <div class="pillars-stream" id="pillars-stream">
+            <!-- Populated by js/main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAND 02: CLOUD EXIT — Why Sovereign On-Premises Wins
+         ==================================================================== -->
+    <section class="band band--canvas" id="sovereignty" aria-labelledby="sov-heading">
+      <div class="container">
+        <div class="sov-header-grid reveal">
+          <div>
+            <span class="chapter-tag">02 — CLOUD REPATRIATION THESIS</span>
+            <h2 class="section-heading" id="sov-heading">
+              Stop renting what you should own.
+            </h2>
+          </div>
+          <p class="section-lead">
+            Public cloud sprawl turns predictable infrastructure into uncapped egress fees, per-token AI bills, and third-party data custody. Modern hyperconverged SANs, container pipelines, and on-premises H100 GPUs deliver cloud agility at fixed cost.
+          </p>
+        </div>
+
+        <div class="comparison-board reveal" id="comparison-board">
+          <div class="comp-legend">
+            <span class="legend-item legend-item--sov">
+              <span class="legend-swatch swatch--sov"></span>
+              Sovereign Modernized On-Premises
+            </span>
+            <span class="legend-item legend-item--cloud">
+              <span class="legend-swatch swatch--cloud"></span>
+              Pricey Cloud-Dependent Sprawl
+            </span>
+          </div>
+
+          <div class="comp-rows" id="comp-rows">
+            <!-- Populated by js/main.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAND 03: SELECTED DELIVERIES — Spacious Bento Grid + Slide-Over Drawer
+         ==================================================================== -->
+    <section class="band band--alt" id="deliveries" aria-labelledby="deliv-heading">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="chapter-tag">03 — PRODUCTION DELIVERIES</span>
+          <h2 class="section-heading" id="deliv-heading">
+            Proven in high-stakes production.
+          </h2>
+          <p class="section-lead">
+            Six flagship initiatives across sovereign AI, SAN modernization, air-gapped recovery, zero-trust security, and $1T+ financial operations. Click any build for full architectural specs.
+          </p>
+        </div>
+
+        <div class="bento-grid" id="bento-grid">
+          <!-- Populated by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAND 04: CAREER TRAJECTORY — Scroll-Illuminated Vertical Spine
+         ==================================================================== -->
+    <section class="band band--canvas" id="career" aria-labelledby="career-heading">
+      <div class="container">
+        <div class="section-intro reveal">
+          <span class="chapter-tag">04 — 20+ YEAR TRAJECTORY</span>
+          <h2 class="section-heading" id="career-heading">
+            From Wall Street trading desks to sovereign civic infrastructure.
+          </h2>
+        </div>
+
+        <div class="career-track-wrap" id="career-track-wrap">
+          <div class="career-spine" aria-hidden="true">
+            <div class="career-spine-fill" id="career-spine-fill"></div>
+          </div>
+          <div class="career-entries" id="career-entries">
             <!-- Populated by js/main.js -->
           </div>
         </div>
 
-        <div class="ai-outcomes-bar">
-          <div class="outcome-cell">
-            <span class="outcome-kicker">Compute Backbone</span>
-            <span class="outcome-text">NVIDIA H100 Multi-GPU Cluster</span>
+        <div class="cred-bar reveal" aria-label="Credentials and Education">
+          <div class="cred-pill">
+            <strong>CompTIA A+ Certified CE</strong>
+            <span>Active Continuing Education</span>
           </div>
-          <div class="outcome-cell">
-            <span class="outcome-kicker">Language &amp; Vision</span>
-            <span class="outcome-text">Llama 3.3 70B (vLLM) + FLUX / ComfyUI</span>
+          <div class="cred-pill">
+            <strong>A.S. Computer Science · 3.9 GPA</strong>
+            <span>Gibbs College (Dean’s List)</span>
           </div>
-          <div class="outcome-cell">
-            <span class="outcome-kicker">Service Fabric</span>
-            <span class="outcome-text">FastAPI · Redis · Docker · Open WebUI</span>
-          </div>
-          <div class="outcome-cell">
-            <span class="outcome-kicker">Applied Integrations</span>
-            <span class="outcome-text">RAG · Cisco CUCM Voice PoC · ArcGIS AI</span>
+          <div class="cred-pill">
+            <strong>CS &amp; Server Administration</strong>
+            <span>Univ. of Bridgeport · New Horizons</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- 02 // Selected Enterprise Case Studies -->
-      <section class="dossier-section" id="case-studies" aria-labelledby="cases-heading">
-        <div class="section-rail">
-          <div class="section-index-cell">
-            <span class="section-index-num">02 // CASE DOSSIERS</span>
-            <span>Production Deliveries</span>
-          </div>
-          <div class="section-title-cell">
-            <h2 class="section-title" id="cases-heading">
-              Selected Infrastructure &amp; Modernization Projects
+    <!-- ====================================================================
+         BAND 05: CONTACT & PRINTABLE RÉSUMÉ — Clean Spacious Closing Band
+         ==================================================================== -->
+    <section class="band band--alt" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-split reveal">
+          <div class="contact-left">
+            <span class="chapter-tag">05 — DIRECT DISPATCH</span>
+            <h2 class="section-heading" id="contact-heading">
+              Ready to modernize your infrastructure?
             </h2>
-            <p class="section-subtitle">
-              Representative datacenter refreshes, storage migrations, zero-trust security rollouts, and operational engineering initiatives executed with minimal disruption.
+            <p class="section-lead">
+              Available for Senior Systems Engineer, Systems Architect, and IT Infrastructure Leadership roles in Northwest Arkansas or hybrid/remote capacities.
             </p>
-          </div>
-        </div>
 
-        <div class="filter-bar" role="toolbar" aria-label="Filter case studies by infrastructure domain">
-          <span class="filter-label">Filter Domain:</span>
-          <button type="button" class="filter-chip is-active" data-filter="all">All (08)</button>
-          <button type="button" class="filter-chip" data-filter="virtualization">Virtualization, SAN &amp; DR</button>
-          <button type="button" class="filter-chip" data-filter="security">Security, PKI &amp; MDM</button>
-          <button type="button" class="filter-chip" data-filter="cloud">Messaging &amp; Civic Platforms</button>
-          <button type="button" class="filter-chip" data-filter="operations">Networking &amp; Operations</button>
-        </div>
-
-        <div class="case-ledger" id="case-ledger">
-          <!-- Populated by js/main.js -->
-        </div>
-      </section>
-
-      <!-- 03 // Domain Capabilities Matrix -->
-      <section class="dossier-section" id="capabilities" aria-labelledby="cap-heading">
-        <div class="section-rail">
-          <div class="section-index-cell">
-            <span class="section-index-num">03 // SPECIFICATION</span>
-            <span>Technical Matrix</span>
-          </div>
-          <div class="section-title-cell">
-            <h2 class="section-title" id="cap-heading">
-              Enterprise Infrastructure Capabilities
-            </h2>
-            <p class="section-subtitle">
-              Production-hardened administration and systems architecture spanning compute, storage, cryptographic identity, network fabrics, and sovereign AI.
-            </p>
-          </div>
-        </div>
-
-        <div class="capabilities-grid" id="capabilities-grid">
-          <!-- Populated by js/main.js -->
-        </div>
-      </section>
-
-      <!-- 04 // 20+ Year Career Ledger & Credentials -->
-      <section class="dossier-section" id="career" aria-labelledby="career-heading">
-        <div class="section-rail">
-          <div class="section-index-cell">
-            <span class="section-index-num">04 // CHRONOLOGY</span>
-            <span>2004 — Present</span>
-          </div>
-          <div class="section-title-cell">
-            <h2 class="section-title" id="career-heading">
-              Professional Experience &amp; Leadership Record
-            </h2>
-            <p class="section-subtitle">
-              Over two decades supporting executive leadership, elected officials, institutional trading desks, and multi-campus municipal operations.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-list" id="timeline-list">
-          <!-- Populated by js/main.js -->
-        </div>
-
-        <div class="credentials-strip" aria-label="Education and Certifications">
-          <div class="cred-label-cell">
-            Credentials &amp; Academic Foundation
-          </div>
-          <div class="cred-cell">
-            <h3 class="cred-title">CompTIA A+ Certified CE</h3>
-            <p class="cred-inst">Continuing Education Credential · Active Certification (2023)</p>
-          </div>
-          <div class="cred-cell">
-            <h3 class="cred-title">A.S. in Computer Science</h3>
-            <p class="cred-inst">Gibbs College, School of Technology (Norwalk, CT) · 3.9 GPA · Dean’s List Award</p>
-          </div>
-          <div class="cred-cell">
-            <h3 class="cred-title">Continuing Engineering Studies</h3>
-            <p class="cred-inst">University of Bridgeport (CS &amp; Ethics) · New Horizons (Windows Server &amp; Active Directory)</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- 05 // Direct Dispatch & Printable Executive Résumé -->
-      <section class="dossier-section" id="contact" aria-labelledby="contact-heading">
-        <div class="section-rail">
-          <div class="section-index-cell">
-            <span class="section-index-num">05 // DISPATCH</span>
-            <span>Direct Contact</span>
-          </div>
-          <div class="section-title-cell">
-            <h2 class="section-title" id="contact-heading">
-              Initiate a Conversation
-            </h2>
-            <p class="section-subtitle">
-              Available for Senior Systems Engineer, Infrastructure Architect, and IT Infrastructure Leadership discussions in Northwest Arkansas or hybrid/remote capacities.
-            </p>
-          </div>
-        </div>
-
-        <div class="contact-layout">
-          <div class="contact-direct">
-            <div>
-              <div class="contact-channels">
-                <div class="channel-row">
-                  <div class="channel-meta">
-                    <span class="channel-label">Electronic Mail</span>
-                    <a href="mailto:stephen@sgrusso.com" class="channel-value">stephen@sgrusso.com</a>
-                  </div>
-                  <button type="button" class="copy-btn" data-copy="stephen@sgrusso.com">COPY</button>
+            <div class="direct-cards">
+              <div class="direct-row">
+                <div>
+                  <span class="direct-kicker">Email</span>
+                  <a href="mailto:stephen@sgrusso.com" class="direct-val">stephen@sgrusso.com</a>
                 </div>
+                <button type="button" class="mini-copy" data-copy="stephen@sgrusso.com">COPY</button>
+              </div>
 
-                <div class="channel-row">
-                  <div class="channel-meta">
-                    <span class="channel-label">Direct Voice / SMS</span>
-                    <a href="tel:+14799570455" class="channel-value">(479) 957-0455</a>
-                  </div>
-                  <button type="button" class="copy-btn" data-copy="(479) 957-0455">COPY</button>
+              <div class="direct-row">
+                <div>
+                  <span class="direct-kicker">Phone</span>
+                  <a href="tel:+14799570455" class="direct-val">(479) 957-0455</a>
                 </div>
+                <button type="button" class="mini-copy" data-copy="(479) 957-0455">COPY</button>
+              </div>
 
-                <div class="channel-row">
-                  <div class="channel-meta">
-                    <span class="channel-label">LinkedIn Profile</span>
-                    <a
-                      href="https://www.linkedin.com/in/stephen-russo-506b18"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="channel-value"
-                    >
-                      linkedin.com/in/stephen-russo-506b18 ↗
-                    </a>
-                  </div>
-                </div>
-
-                <div class="channel-row">
-                  <div class="channel-meta">
-                    <span class="channel-label">Operating Base</span>
-                    <span class="channel-value">Northwest Arkansas (Fayetteville / Prairie Grove, AR)</span>
-                  </div>
+              <div class="direct-row">
+                <div>
+                  <span class="direct-kicker">LinkedIn</span>
+                  <a
+                    href="https://www.linkedin.com/in/stephen-russo-506b18"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="direct-val"
+                  >
+                    linkedin.com/in/stephen-russo-506b18 ↗
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div class="resume-callout">
-              <h3>Formatted Executive Résumé (Print / Save as PDF)</h3>
-              <p>
-                Need a clean, ATS-compatible document for an interview panel or executive packet? Open the live print-engineered résumé view with one-click PDF export.
-              </p>
+            <div class="resume-banner">
               <div>
-                <a href="resume.html" class="btn btn-secondary">Open Printable Résumé ↗</a>
+                <strong>Need a clean PDF résumé?</strong>
+                <span>Print-engineered 2-page &amp; comprehensive views.</span>
               </div>
+              <a href="resume.html" class="btn btn--secondary">Open Résumé ↗</a>
             </div>
           </div>
 
-          <div class="contact-form-pane">
-            <!-- Optional: set data-endpoint="https://formspree.io/f/YOUR_ID" for silent background POST -->
-            <form class="dispatch-form" id="dispatch-form" data-endpoint="">
-              <div class="form-row-split">
-                <div class="field-group">
-                  <label class="field-label" for="sender-name">Your Name *</label>
-                  <input
-                    class="field-input"
-                    type="text"
-                    id="sender-name"
-                    name="name"
-                    required
-                    autocomplete="name"
-                    placeholder="Jane Doe"
-                  />
+          <div class="contact-right">
+            <form class="clean-form" id="dispatch-form" data-endpoint="">
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="sender-name">Name *</label>
+                  <input type="text" id="sender-name" name="name" required autocomplete="name" placeholder="Jane Doe" />
                 </div>
-
-                <div class="field-group">
-                  <label class="field-label" for="sender-email">Work Email *</label>
-                  <input
-                    class="field-input"
-                    type="email"
-                    id="sender-email"
-                    name="email"
-                    required
-                    autocomplete="email"
-                    placeholder="jane@organization.com"
-                  />
+                <div class="form-field">
+                  <label for="sender-email">Work Email *</label>
+                  <input type="email" id="sender-email" name="email" required autocomplete="email" placeholder="jane@company.com" />
                 </div>
               </div>
 
-              <div class="form-row-split">
-                <div class="field-group">
-                  <label class="field-label" for="sender-org">Organization</label>
-                  <input
-                    class="field-input"
-                    type="text"
-                    id="sender-org"
-                    name="organization"
-                    autocomplete="organization"
-                    placeholder="Enterprise / Agency Name"
-                  />
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="sender-org">Organization</label>
+                  <input type="text" id="sender-org" name="organization" autocomplete="organization" placeholder="Company or Agency" />
                 </div>
-
-                <div class="field-group">
-                  <label class="field-label" for="sender-topic">Inquiry Scope</label>
-                  <select class="field-select" id="sender-topic" name="topic">
-                    <option value="Senior Systems / Infrastructure Role">Senior Systems / Infrastructure Role</option>
-                    <option value="Enterprise AI / Datacenter Architecture">Enterprise AI / Datacenter Architecture</option>
-                    <option value="IT Infrastructure Leadership">IT Infrastructure Leadership</option>
-                    <option value="Advisory / Technical Consultation">Advisory / Technical Consultation</option>
+                <div class="form-field">
+                  <label for="sender-topic">Focus Area</label>
+                  <select id="sender-topic" name="topic">
+                    <option value="Senior Infrastructure / Architecture Role">Senior Infrastructure / Architecture Role</option>
+                    <option value="Datacenter Modernization & Cloud Exit">Datacenter Modernization &amp; Cloud Exit</option>
+                    <option value="On-Premises Enterprise AI">On-Premises Enterprise AI</option>
+                    <option value="Cybersecurity & Disaster Recovery">Cybersecurity &amp; Disaster Recovery</option>
                   </select>
                 </div>
               </div>
 
-              <div class="field-group">
-                <label class="field-label" for="sender-message">Message / Role Brief *</label>
-                <textarea
-                  class="field-textarea"
-                  id="sender-message"
-                  name="message"
-                  required
-                  placeholder="Share role context, team priorities, or architectural scope..."
-                ></textarea>
+              <div class="form-field">
+                <label for="sender-message">Message *</label>
+                <textarea id="sender-message" name="message" required placeholder="Tell me about the role, team, or architectural challenge..."></textarea>
               </div>
 
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Compose Dispatch →</button>
-                <span class="form-status" id="form-status" aria-live="polite">
-                  Direct delivery to stephen@sgrusso.com
-                </span>
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn--primary magnetic">Send Message →</button>
+                <span class="form-feedback" id="form-status" aria-live="polite">Direct to stephen@sgrusso.com</span>
               </div>
             </form>
           </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        © 2026 Stephen G. Russo · SGRusso.com · Northwest Arkansas
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Stephen G. Russo · Northwest Arkansas</span>
       <div class="footer-links">
         <a href="resume.html">Printable Résumé</a>
         <a href="mailto:stephen@sgrusso.com">stephen@sgrusso.com</a>
         <a href="tel:+14799570455">(479) 957-0455</a>
         <a href="https://www.linkedin.com/in/stephen-russo-506b18" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
       </div>
-    </footer>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Project Spec Drawer -->
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden>
+    <aside class="spec-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-top">
+        <span class="drawer-badge" id="drawer-badge">ARCHITECTURE SPEC</span>
+        <button type="button" class="drawer-close" id="drawer-close" aria-label="Close specification">ESC ✕</button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </aside>
   </div>
 
   <!-- Command Palette (⌘K / Ctrl+K) -->
@@ -557,7 +548,7 @@
           type="text"
           class="cmd-input"
           id="cmd-input"
-          placeholder="Jump to section, case study, or action..."
+          placeholder="Jump to architecture pillar, project, or résumé..."
           autocomplete="off"
         />
       </div>
@@ -573,4 +564,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
