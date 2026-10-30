@@ -15,7 +15,7 @@ For a Systems Engineer & Architect deploying to GitHub Pages, a zero-build seman
 ## Design Lineage
 - **`DESIGN.md` (`VoltAgent/awesome-design-md`):** Root-level design system documenting OKLCH tokens, 3-voice typography (`IBM Plex Sans` + `Newsreader` + `IBM Plex Mono`), and spatial rails.
 - **`pbakaus/impeccable` Compliance:** Tinted OKLCH slate/stone neutrals (never `#000000` or harsh `#ffffff`), zero purple-to-blue gradients, zero nested rounded-card soup, and single intentional copper/amber semantic accent.
-- **`nutlope/hallmark` Macrostructure (`asymmetric-technical-dossier`):** Asymmetric 7:5 blueprint hero anchored to a tabular specification ledger, interactive GEORGE H100 AI system topology inspector, and hairline-ruled dossier rows.
+- **`nutlope/hallmark` Macrostructure (`asymmetric-technical-dossier`):** Asymmetric 7:5 blueprint hero anchored to a tabular specification ledger, interactive H100 AI system topology inspector, and hairline-ruled dossier rows.
 - **`rmvoss.com` Narrative Clarity:** Outcome-driven enterprise case studies, sovereign GPU/AI specialization, scannable domain matrix, and direct contact dispatch.
 
 ---
@@ -30,7 +30,7 @@ For a Systems Engineer & Architect deploying to GitHub Pages, a zero-build seman
 ├── .gitignore          # Excludes 'ref assets/' so private street addresses stay local
 ├── css/
 │   ├── tokens.css      # OKLCH Slate Dark & Warm Paper Light design tokens
-│   ├── styles.css      # Structural layout, GEORGE topology, case ledger, ⌘K modal
+│   ├── styles.css      # Structural layout, AI topology, case ledger, ⌘K modal
 │   └── resume.css      # Executive résumé & @media print rules
 ├── js/
 │   ├── data.js         # Centralized editorialized content (AI layers, cases, skills, career)

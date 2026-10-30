@@ -358,18 +358,18 @@
   }
 
   /* ------------------------------------------------------------------------
-     6. GEORGE AI Interactive System Topology, Auto-Tour & Inspector Crossfade
+     6. Enterprise AI Interactive System Topology, Auto-Tour & Inspector Crossfade
      ------------------------------------------------------------------------ */
-  const georgeLayout = document.getElementById("george-layout");
-  const topologyMount = document.getElementById("george-topology");
-  const inspectorMount = document.getElementById("george-inspector");
-  const tourStatusBadge = document.getElementById("george-tour-status");
+  const aiPlatformLayout = document.getElementById("ai-platform-layout");
+  const topologyMount = document.getElementById("ai-topology");
+  const inspectorMount = document.getElementById("ai-inspector");
+  const tourStatusBadge = document.getElementById("ai-tour-status");
 
-  let currentGeorgeIdx = 0;
+  let currentAiLayerIdx = 0;
   let tourLockedManual = false;
   let tourHoverPaused = false;
   let tourTimer = null;
-  let georgeInView = false;
+  let aiPlatformInView = false;
 
   function escapeHtml(str) {
     const div = document.createElement("div");
@@ -394,7 +394,7 @@
     }
   }
 
-  function renderGeorgeInspector(layer) {
+  function renderAiInspector(layer) {
     if (!inspectorMount || !layer) return;
     const bulletsHtml = layer.bullets
       .map(function (b) {
@@ -423,7 +423,7 @@
   function syncTourSweepState() {
     if (!topologyMount) return;
     const activelyTouring =
-      !tourLockedManual && !tourHoverPaused && !prefersReducedMotion && georgeInView;
+      !tourLockedManual && !tourHoverPaused && !prefersReducedMotion && aiPlatformInView;
     topologyMount.querySelectorAll(".topology-node").forEach(function (btn) {
       const isSel = btn.classList.contains("is-selected");
       btn.classList.remove("is-touring");
@@ -435,9 +435,9 @@
     });
   }
 
-  function selectGeorgeLayerByIndex(idx) {
-    currentGeorgeIdx = (idx + DATA.georgeLayers.length) % DATA.georgeLayers.length;
-    const selected = DATA.georgeLayers[currentGeorgeIdx];
+  function selectAiLayerByIndex(idx) {
+    currentAiLayerIdx = (idx + DATA.aiLayers.length) % DATA.aiLayers.length;
+    const selected = DATA.aiLayers[currentAiLayerIdx];
 
     if (topologyMount) {
       topologyMount.querySelectorAll(".topology-node").forEach(function (btn) {
@@ -448,27 +448,27 @@
         if (ind) ind.textContent = active ? "ACTIVE ▸" : "INSPECT";
       });
     }
-    renderGeorgeInspector(selected);
+    renderAiInspector(selected);
     syncTourSweepState();
   }
 
-  function scheduleGeorgeTour() {
+  function scheduleAiTour() {
     clearInterval(tourTimer);
-    if (prefersReducedMotion || tourLockedManual || tourHoverPaused || !georgeInView) {
+    if (prefersReducedMotion || tourLockedManual || tourHoverPaused || !aiPlatformInView) {
       syncTourSweepState();
       return;
     }
     syncTourSweepState();
     tourTimer = setInterval(function () {
-      if (!tourLockedManual && !tourHoverPaused && georgeInView) {
-        selectGeorgeLayerByIndex(currentGeorgeIdx + 1);
+      if (!tourLockedManual && !tourHoverPaused && aiPlatformInView) {
+        selectAiLayerByIndex(currentAiLayerIdx + 1);
       }
     }, 5200);
   }
 
   if (topologyMount && inspectorMount) {
     const parts = [];
-    DATA.georgeLayers.forEach(function (layer, idx) {
+    DATA.aiLayers.forEach(function (layer, idx) {
       parts.push(
         '<button type="button" role="tab" class="topology-node spotlight-surface' +
           (idx === 0 ? " is-selected" : "") +
@@ -488,7 +488,7 @@
           "</button>"
       );
 
-      if (idx < DATA.georgeLayers.length - 1) {
+      if (idx < DATA.aiLayers.length - 1) {
         const busLabel =
           idx === 0
             ? "NVLink / PCIe Gen5 Compute Bus"
@@ -505,7 +505,7 @@
     });
 
     topologyMount.innerHTML = parts.join("");
-    renderGeorgeInspector(DATA.georgeLayers[0]);
+    renderAiInspector(DATA.aiLayers[0]);
     updateTourBadge();
 
     topologyMount.addEventListener("click", function (e) {
@@ -514,30 +514,30 @@
       tourLockedManual = true;
       updateTourBadge();
       clearInterval(tourTimer);
-      selectGeorgeLayerByIndex(Number(btn.getAttribute("data-layer-idx") || "0"));
+      selectAiLayerByIndex(Number(btn.getAttribute("data-layer-idx") || "0"));
     });
 
-    if (georgeLayout) {
-      georgeLayout.addEventListener("pointerenter", function () {
+    if (aiPlatformLayout) {
+      aiPlatformLayout.addEventListener("pointerenter", function () {
         tourHoverPaused = true;
         updateTourBadge();
-        scheduleGeorgeTour();
+        scheduleAiTour();
       });
-      georgeLayout.addEventListener("pointerleave", function () {
+      aiPlatformLayout.addEventListener("pointerleave", function () {
         tourHoverPaused = false;
         updateTourBadge();
-        scheduleGeorgeTour();
+        scheduleAiTour();
       });
 
       if ("IntersectionObserver" in window) {
-        const georgeObs = new IntersectionObserver(
+        const aiObs = new IntersectionObserver(
           function (entries) {
-            georgeInView = entries[0] ? entries[0].isIntersecting : false;
-            scheduleGeorgeTour();
+            aiPlatformInView = entries[0] ? entries[0].isIntersecting : false;
+            scheduleAiTour();
           },
           { threshold: 0.2 }
         );
-        georgeObs.observe(georgeLayout);
+        aiObs.observe(aiPlatformLayout);
       }
     }
   }
@@ -891,7 +891,7 @@
 
   const COMMANDS = [
     {
-      title: "Jump to GEORGE Enterprise AI Platform (H100 / vLLM)",
+      title: "Jump to Sovereign Enterprise AI Platform (H100 / vLLM)",
       cat: "Architecture",
       action: function () {
         location.hash = "#ai-architecture";

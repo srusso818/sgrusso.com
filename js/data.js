@@ -1,11 +1,11 @@
 /* ==========================================================================
    SGRusso.com — Editorialized Architectural Content Store
-   Centralized structured data powering the Dossier UI, GEORGE Inspector,
+   Centralized structured data powering the Dossier UI, AI Topology Inspector,
    Case Studies, Capabilities Matrix, Career Ledger, and Command Palette.
    ========================================================================== */
 
 window.SGR_DATA = {
-  georgeLayers: [
+  aiLayers: [
     {
       id: "layer-compute",
       code: "L1 // COMPUTE",
@@ -78,7 +78,7 @@ window.SGR_DATA = {
       preview: "Cisco CUCM Voice PoC · Local STT/TTS · Esri ArcGIS Deep Learning · IT Copilot",
       eyebrow: "Layer 04 — Applied Public-Sector & Operations Workflows",
       summary:
-        "Extended GEORGE beyond chat into practical government service delivery—connecting sovereign AI directly to telephony, geospatial platforms, and IT runbooks.",
+        "Extended the platform beyond chat into practical government service delivery—connecting sovereign AI directly to telephony, geospatial platforms, and IT runbooks.",
       bullets: [
         "Architected a public-information telephone assistant proof of concept integrating Cisco Unified Communications Manager (CUCM) with local speech-to-text and text-to-speech pipelines.",
         "Evaluated Esri ArcGIS deep-learning and geospatial AI integrations to accelerate county mapping and planning analysis.",
@@ -399,7 +399,7 @@ window.SGR_DATA = {
       summary:
         "Owned core datacenter, virtualization, storage, identity, messaging, and sovereign AI infrastructure across dual county campuses serving Courts, Law Enforcement, Detention, Finance, and GIS.",
       highlights: [
-        "Engineered GEORGE—an on-premises NVIDIA H100 enterprise AI platform serving Meta Llama 3.3 70B (vLLM), FLUX/ComfyUI, FastAPI/Redis middleware, Open WebUI, and Cisco CUCM voice prototypes.",
+        "Engineered a sovereign on-premises NVIDIA H100 enterprise AI platform serving Meta Llama 3.3 70B (vLLM), FLUX/ComfyUI, FastAPI/Redis middleware, Open WebUI, and Cisco CUCM voice prototypes.",
         "Led dual-campus VMware vSphere 8 cluster refresh and live SAN migration from legacy Dell EMC arrays to replicated Dell PowerStore storage.",
         "Designed internal PKI (AD CS, NDES/SCEP) integrated with Ivanti Neurons/Sentry and Apple Business Manager for automated certificate-based mobile authentication.",
         "Administered hybrid Exchange 2019 CU15 and Microsoft Entra ID; migrated enterprise email security from Cisco ESA to Proofpoint Essentials with strict SPF, DKIM, and DMARC.",

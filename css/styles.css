@@ -582,16 +582,16 @@ select {
 }
 
 /* ==========================================================================
-   Section 01 — Flagship Spotlight: GEORGE Enterprise AI Architecture
+   Section 01 — Flagship Spotlight: Sovereign Enterprise AI Architecture
    Interactive Topology Blueprint + Layer Specification Inspector
    ========================================================================== */
 
-.george-layout {
+.ai-platform-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.95fr);
 }
 
-.george-diagram-pane {
+.ai-diagram-pane {
   padding: var(--space-6) var(--space-7);
   border-right: 1px solid var(--border-subtle);
   background-color: var(--bg-recessed);
@@ -721,7 +721,7 @@ select {
 }
 
 /* Right Pane: Live Layer Inspector */
-.george-inspector-pane {
+.ai-inspector-pane {
   padding: var(--space-6) var(--space-6);
   display: flex;
   flex-direction: column;
@@ -793,7 +793,7 @@ select {
   letter-spacing: 0.02em;
 }
 
-.george-outcomes-bar {
+.ai-outcomes-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--border-subtle);
@@ -1563,13 +1563,13 @@ select {
 
 @media (max-width: 1024px) {
   .hero-section,
-  .george-layout,
+  .ai-platform-layout,
   .contact-layout {
     grid-template-columns: 1fr;
   }
 
   .hero-editorial,
-  .george-diagram-pane,
+  .ai-diagram-pane,
   .contact-direct {
     border-right: none;
     border-bottom: 1px solid var(--border-subtle);
@@ -1591,7 +1591,7 @@ select {
     padding: var(--space-5);
   }
 
-  .george-outcomes-bar {
+  .ai-outcomes-bar {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1707,8 +1707,8 @@ select {
   }
 
   .hero-editorial,
-  .george-diagram-pane,
-  .george-inspector-pane,
+  .ai-diagram-pane,
+  .ai-inspector-pane,
   .contact-direct,
   .contact-form-pane {
     padding: var(--space-5);
@@ -1722,7 +1722,7 @@ select {
   }
 
   .capabilities-grid,
-  .george-outcomes-bar,
+  .ai-outcomes-bar,
   .form-row-split {
     grid-template-columns: 1fr;
   }
@@ -1825,7 +1825,7 @@ select {
 .hero-stagger-3 { animation-delay: 210ms; }
 .hero-stagger-4 { animation-delay: 300ms; }
 
-/* 4. GEORGE AI Data-Packet Signal Conduits, Tour Progress & Inspector Crossfade */
+/* 4. Enterprise AI Data-Packet Signal Conduits, Tour Progress & Inspector Crossfade */
 .tour-badge {
   display: inline-flex;
   align-items: center;
@@ -1861,7 +1861,7 @@ select {
   transform: translateX(4px);
 }
 
-/* Auto-tour timer sweep along bottom of active GEORGE layer */
+/* Auto-tour timer sweep along bottom of active AI layer */
 @keyframes tourSweep {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }

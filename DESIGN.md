@@ -78,7 +78,7 @@ Three intentional voices with distinct structural roles:
 - **Baseline Rhythm:** Strict `4px` / `8px` multiples (`8, 12, 16, 24, 32, 48, 64, 96px`).
 - **Section Cadence:**
   - `00 // HEADER & HERO` — Asymmetric 7:5 split (Editorial thesis left; Specification Ledger right).
-  - `01 // FLAGSHIP ARCHITECTURE` — GEORGE On-Premises Enterprise AI Platform with interactive 4-layer SVG system topology inspector.
+  - `01 // FLAGSHIP ARCHITECTURE` — Sovereign On-Premises Enterprise AI Platform with interactive 4-layer system topology inspector.
   - `02 // SELECTED CASE STUDIES` — Filterable architectural ledger (`01`–`08`) with expandable engineering deep-dives (Context → Architecture → Operational Outcome).
   - `03 // CAPABILITY MATRIX` — 6-pillar hairline-divided domain specification table.
   - `04 // CAREER LEDGER` — Left-anchored chronological index spanning 2004–Present across Northwest Arkansas & NYC/Greenwich institutional finance, followed by credentials.
